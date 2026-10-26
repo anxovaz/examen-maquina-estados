@@ -3,7 +3,7 @@ package org.danielcastelao.dam
 sealed class Estados {
     data class Idle(val mensaje: String = "Estado IDLE") : Estados(){
         fun entrar(piso: Niveles): Niveles {
-            println("Estoy en estado IDLE, pulsa un botón para subir o bajar")
+            println("Estoy en estado IDLE")
             if (piso == Niveles.NIVEL0) {
                 return Niveles.NIVEL0
             }else if(piso== Niveles.NIVEL1) {
@@ -15,12 +15,12 @@ sealed class Estados {
     }
     data class MovingUP(val mensaje: String = "Estado MovingUP") : Estados() {
         fun entrar() {
-            println("El ascenson está subiendo")
+            println("El ascensor está subiendo")
         }
     }
     data class MovingDOWN(val mensaje: String = "Estado MovingDOWN") : Estados(){
         fun entrar() {
-            println("El ascenson está bajando")
+            println("El ascensor está bajando")
         }
     }
     data class Error(val mensaje: String = "Estado Error") : Estados(){
