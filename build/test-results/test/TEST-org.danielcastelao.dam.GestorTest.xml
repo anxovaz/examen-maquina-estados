@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.danielcastelao.dam.GestorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-26T09:24:17.014Z" hostname="fedora-lap" time="0.093">
+<testsuite name="org.danielcastelao.dam.GestorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-26T09:37:40.502Z" hostname="fedora-lap" time="2.515">
   <properties/>
-  <testcase name="gestor establece el nivel cuando el estado es MovingUP()" classname="org.danielcastelao.dam.GestorTest" time="0.052"/>
-  <testcase name="gestor establece el nivel cuando el estado es MovingDOWN()" classname="org.danielcastelao.dam.GestorTest" time="0.004"/>
-  <testcase name="gestor reinicia el nivel cuando el estado es Idle()" classname="org.danielcastelao.dam.GestorTest" time="0.005"/>
-  <testcase name="gestor establece el nivel de error cuando el estado es Error()" classname="org.danielcastelao.dam.GestorTest" time="0.004"/>
+  <testcase name="gestor establece el nivel cuando el estado es MovingUP()" classname="org.danielcastelao.dam.GestorTest" time="1.27"/>
+  <testcase name="gestor establece el nivel cuando el estado es MovingDOWN()" classname="org.danielcastelao.dam.GestorTest" time="1.207"/>
+  <testcase name="gestor reinicia el nivel cuando el estado es Idle()" classname="org.danielcastelao.dam.GestorTest" time="0.006"/>
+  <testcase name="gestor establece el nivel de error cuando el estado es Error()" classname="org.danielcastelao.dam.GestorTest" time="0.003"/>
   <system-out><![CDATA[test2
 El ascensor está subiendo
+El ascensor está en movimiento...
+0%
+20%
+40%
+60%
+80%
+100%
+Abriendo las puertas
 --
 After Test
 test3
 El ascensor está bajando
+El ascensor está en movimiento...
+0%
+20%
+40%
+60%
+80%
+100%
+Abriendo las puertas
 ---
 After Test
 test1
-Por favor escoje un piso
+Por favor escoje un piso, estoy en estado Idle(mensaje=Estado IDLE)
 After Test
 test4
 Error, vuelve a intentarlo
