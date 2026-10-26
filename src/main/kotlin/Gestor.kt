@@ -35,14 +35,14 @@ object Gestor{
 
             is Estados.MovingUP -> {
                 Estados.MovingUP().entrar()
-                nivel_actual = Niveles.NIVEL1
+                nivel_actual = Niveles.NIVEL2
                 estado_actual = Estados.Idle() //siguiente estadio
                 return Niveles.NIVEL2
             }
 
             is Estados.MovingDOWN -> {
                 Estados.MovingDOWN().entrar()
-                nivel_actual = Niveles.NIVEL0
+                nivel_actual = Niveles.NIVEL2
                 estado_actual = Estados.Idle() // siguiente estado
                 return Niveles.NIVEL2
             }

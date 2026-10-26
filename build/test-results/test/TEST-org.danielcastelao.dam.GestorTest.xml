@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.danielcastelao.dam.GestorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-26T09:24:17.014Z" hostname="fedora-lap" time="0.093">
+  <properties/>
+  <testcase name="gestor establece el nivel cuando el estado es MovingUP()" classname="org.danielcastelao.dam.GestorTest" time="0.052"/>
+  <testcase name="gestor establece el nivel cuando el estado es MovingDOWN()" classname="org.danielcastelao.dam.GestorTest" time="0.004"/>
+  <testcase name="gestor reinicia el nivel cuando el estado es Idle()" classname="org.danielcastelao.dam.GestorTest" time="0.005"/>
+  <testcase name="gestor establece el nivel de error cuando el estado es Error()" classname="org.danielcastelao.dam.GestorTest" time="0.004"/>
+  <system-out><![CDATA[test2
+El ascensor está subiendo
+--
+After Test
+test3
+El ascensor está bajando
+---
+After Test
+test1
+Por favor escoje un piso
+After Test
+test4
+Error, vuelve a intentarlo
+After Test
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
