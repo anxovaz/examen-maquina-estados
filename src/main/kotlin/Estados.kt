@@ -2,8 +2,9 @@ package org.danielcastelao.dam
 
 sealed class Estados {
     object Idle : Estados(){
-        fun entrar() {
+        fun entrar(piso: Int): Int {
             println("Estoy en estado IDLE, pulsa un botón para subir o bajar")
+            return piso
         }
     }
     object MovingUP : Estados() {
