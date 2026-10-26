@@ -11,7 +11,11 @@ sealed class Estados {
             println("El ascenson está subiendo")
         }
     }
-    object MovingDOWN : Estados()
+    object MovingDOWN : Estados(){
+        fun entrar() {
+            println("El ascenson está bajando")
+        }
+    }
     object Error : Estados(){
         fun mostrarError(mensaje: String = "", siguienteEstado: Estados): Estados {
             println(mensaje)
