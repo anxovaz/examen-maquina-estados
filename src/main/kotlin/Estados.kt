@@ -1,5 +1,8 @@
 package org.danielcastelao.dam
 
+/**
+ * Estados
+ */
 sealed class Estados {
     data class Idle(val mensaje: String = "Estado IDLE") : Estados(){
         fun entrar(piso: Niveles): Niveles {

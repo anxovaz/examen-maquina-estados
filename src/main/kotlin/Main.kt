@@ -2,6 +2,9 @@ package org.danielcastelao.dam
 
 import org.danielcastelao.dam.Gestor.gestor
 
+/**
+ * Main (para probar yo)
+ */
 fun main() {
     Gestor.gestor(false,true)
     println(" - ")

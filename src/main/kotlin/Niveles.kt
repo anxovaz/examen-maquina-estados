@@ -1,5 +1,8 @@
 package org.danielcastelao.dam
 
+/**
+ * Niveles
+ */
 enum class Niveles(mensaje: String) {
     NIVEL0("Nivel Avenida G. Barbón"),
     NIVEL1("Nivel Plaza de Compostela"),
