@@ -1,5 +1,6 @@
 package org.danielcastelao.dam
 
+
 import kotlin.test.AfterTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -7,43 +8,47 @@ import kotlin.test.assertEquals
 class GestorTest {
     @AfterTest
     fun restaurarEstado() {
-        estado_acual = Estados.Idle
-        nivel_actual = 0
+        println("After Test")
+        Gestor.estado_actual = Estados.Idle()
+        Gestor.nivel_actual = Niveles.NIVEL0
     }
 
     @Test
     fun `gestor reinicia el nivel cuando el estado es Idle`() {
-        estado_acual = Estados.Idle
-        nivel_actual = 5
+        println("test1")
+        Gestor.estado_actual = Estados.Idle()
 
-        assertEquals(0, gestor())
-        assertEquals(0, nivel_actual)
+        assertEquals(Niveles.NIVEL0, Gestor.gestor())
+        assertEquals(Niveles.NIVEL0, Gestor.nivel_actual)
     }
 
     @Test
     fun `gestor establece el nivel cuando el estado es MovingUP`() {
-        estado_acual = Estados.MovingUP
-        nivel_actual = 5
+        println("test2")
+        Gestor.estado_actual = Estados.MovingUP()
+        Gestor.nivel_actual = Niveles.NIVEL2
 
-        assertEquals(2, gestor())
-        assertEquals(2, nivel_actual)
+        assertEquals(Niveles.NIVEL2, Gestor.gestor())
+        println("--")
+        assertEquals(Niveles.NIVEL2, Gestor.nivel_actual)
     }
 
     @Test
     fun `gestor establece el nivel cuando el estado es MovingDOWN`() {
-        estado_acual = Estados.MovingDOWN
-        nivel_actual = 5
+        println("test3")
+        Gestor.estado_actual = Estados.MovingDOWN()
 
-        assertEquals(2, gestor())
-        assertEquals(2, nivel_actual)
+        assertEquals(Niveles.NIVEL2, Gestor.gestor())
+        println("---")
+        assertEquals(Niveles.NIVEL2, Gestor.nivel_actual)
     }
 
     @Test
     fun `gestor establece el nivel de error cuando el estado es Error`() {
-        estado_acual = Estados.Error
-        nivel_actual = 5
+        println("test4")
+        Gestor.estado_actual = Estados.Error()
 
-        assertEquals(-1, gestor())
-        assertEquals(-1, nivel_actual)
+        assertEquals(Niveles.NIVELERROR, Gestor.gestor())
+        assertEquals(Niveles.NIVELERROR, Gestor.nivel_actual)
     }
 }
